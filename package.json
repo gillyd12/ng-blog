@@ -1,0 +1,38 @@
+{
+  "name": "ng-blog",
+  "version": "0.0.1",
+  "description": "interoperable blog directive that consumes json",
+  "homepage": "http://www.shipitweekly.com",
+  "bugs": "https://github.com/shipitweekly/ng-blog/issues",
+  "contributors": [
+    "Bryan Gill <bryan@shipitweekly.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shipitweekly/ng-blog"
+  },
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
+    "jspm": "^0.16.13",
+    "systemjs": "^0.19.5"
+  },
+  "jspm": {
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.4.3",
+      "angular-route": "github:angular/bower-angular-route@^1.4.3",
+      "angular-sanitize": "github:angular/bower-angular-sanitize@^1.4.3",
+      "bootstrap-less": "github:distros/bootstrap-less@^3.3.8",
+      "font-awesome": "npm:font-awesome@^4.4.0",
+      "text": "github:systemjs/plugin-text@^0.0.2"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}
