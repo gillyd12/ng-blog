@@ -1,8 +1,12 @@
 /**
  * Created by Gillyd on 10/22/2015.
  */
-var mainModule = angular.module('mainApp', [
 
+// Vendor
+import VendorModule from './modules/vendor';
+
+var mainModule = angular.module('mainApp', [
+    VendorModule.name
 ])
 
 export default mainModule;
