@@ -1,11 +1,14 @@
 # ng-blog
 Interoperable blog that consumes json for data.  We'll see where this goes.
 
-# Installation
-ng-blog is available via jspm.
+## Installation
 
-If you haven't already, install jspm via npm then the following
+Step 1    
+    
+    npm install
+    
+Step 2 
 
-'''
-jspm install
-'''
+    jspm install
+
+
