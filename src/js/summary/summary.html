@@ -1,3 +1,24 @@
-<div>
-    Skeleton for directive is here.
-</div>
+<!--<div data-ng-bind="data.items[0].content">-->
+<!--Skeleton for directive is here.-->
+<!--</div>-->
+
+
+<ul>
+    <li data-ng-repeat="blog in data.items">
+        Content:
+        <div data-ng-bind="blog.content"/>
+    </li>
+</ul>
+
+
+<div> Get Blogs Data:</div>
+<ul>
+    <li data-ng-bind="data.kind"/>
+    <li data-ng-bind="data.id"/>
+    <li data-ng-bind="data.name"/>
+    <li data-ng-bind="data.description"/>
+    <li data-ng-bind="data.published"/>
+    <li data-ng-bind="data.updated"/>
+    <li data-ng-bind="data.url"/>
+    <li data-ng-bind="data.selfLink"/>
+</ul>
