@@ -1,24 +1,8 @@
-<!--<div data-ng-bind="data.items[0].content">-->
-<!--Skeleton for directive is here.-->
-<!--</div>-->
-
-
-<ul>
-    <li data-ng-repeat="blog in data.items">
-        Content:
-        <div data-ng-bind="blog.content"/>
-    </li>
-</ul>
-
-
-<div> Get Blogs Data:</div>
-<ul>
-    <li data-ng-bind="data.kind"/>
-    <li data-ng-bind="data.id"/>
-    <li data-ng-bind="data.name"/>
-    <li data-ng-bind="data.description"/>
-    <li data-ng-bind="data.published"/>
-    <li data-ng-bind="data.updated"/>
-    <li data-ng-bind="data.url"/>
-    <li data-ng-bind="data.selfLink"/>
-</ul>
+<div data-ng-repeat="post in posts.items">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title" data-ng-bind="post.title"/>
+        </div>
+        <div class="panel-body" data-ng-bind-html="post.content"/>
+    </div>
+</div>

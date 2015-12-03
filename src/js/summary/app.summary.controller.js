@@ -17,18 +17,32 @@ class SummaryController {
         view = $scope;
         http = $http;
         summaryService = SummaryService;
-        this.retrieveBlogContent()
+        //this.retrieveBlogContent()
+        //    .then(function (data) {
+        //        view.data = data.data;
+        //    }, function (response) {
+        //        view.error = response.statusText;
+        //    });
+        this.retrievePosts()
             .then(function (data) {
-                view.data = data.data;
+                view.posts = data.data;
             }, function (response) {
                 view.error = response.statusText;
             });
+
+
     }
 
     retrieveBlogContent() {
         // this method will be refactored into a service.  Temporarily in the constructor right now.
         return http.get('http://localhost:1337/blogs');
     }
+
+    retrievePosts() {
+        // this method will be refactored into a service.  Temporarily in the constructor right now.
+        return http.get('http://localhost:1337/posts');
+    }
+
 
 }
 
