@@ -6,10 +6,8 @@ import SummaryController from './app.summary.controller';
 
 function summaryDirective() {
     return {
-        //restrict: "E",
-        //scope: true,
+        restrict: "E",
         template: template,
-        //bindToController: true,
         controllerAs: "summaryCntl",
         controller: SummaryController
     };

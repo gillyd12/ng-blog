@@ -27,7 +27,6 @@
       "angular-sanitize": "github:angular/bower-angular-sanitize@^1.4.3",
       "bootstrap-less": "github:distros/bootstrap-less@^3.3.8",
       "font-awesome": "npm:font-awesome@^4.4.0",
-      "maximepvrt/angular-google-gapi": "github:maximepvrt/angular-google-gapi@^0.1.3",
       "text": "github:systemjs/plugin-text@^0.0.2"
     },
     "devDependencies": {

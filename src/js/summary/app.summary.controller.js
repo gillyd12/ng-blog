@@ -4,48 +4,29 @@
 
 var summaryService;
 var view;
-var http;
 
 class SummaryController {
 
-    constructor($scope, $http, SummaryService) {
-        this.init($scope, $http, SummaryService);
-
+    constructor($scope, SummaryService) {
+        this.init($scope, SummaryService);
     }
 
-    init($scope, $http, SummaryService) {
+    init($scope, SummaryService) {
         view = $scope;
-        http = $http;
         summaryService = SummaryService;
-        //this.retrieveBlogContent()
-        //    .then(function (data) {
-        //        view.data = data.data;
-        //    }, function (response) {
-        //        view.error = response.statusText;
-        //    });
-        this.retrievePosts()
-            .then(function (data) {
-                view.posts = data.data;
-            }, function (response) {
-                view.error = response.statusText;
-            });
-
-
-    }
-
-    retrieveBlogContent() {
-        // this method will be refactored into a service.  Temporarily in the constructor right now.
-        return http.get('http://localhost:1337/blogs');
+        this.retrievePosts();
     }
 
     retrievePosts() {
-        // this method will be refactored into a service.  Temporarily in the constructor right now.
-        return http.get('http://localhost:1337/posts');
+        summaryService.getPosts()
+            .then(function (response) {
+                view.collection = response.data;
+            }, function (response) {
+                view.error = response.statusText;
+            });
     }
-
-
 }
 
-SummaryController.$inject = ['$scope', '$http', 'SummaryService'];
+SummaryController.$inject = ['$scope', 'SummaryService'];
 
 export default SummaryController;
