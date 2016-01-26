@@ -1,0 +1,7 @@
+{
+  "environment": "production",
+  "api": {
+    "url": "http://shipitweekly.com",
+    "port": "1337"
+  }
+}

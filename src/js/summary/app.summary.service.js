@@ -5,17 +5,21 @@
 var request;
 var http;
 var q;
+var config;
 
 class SummaryService {
 
-    constructor($http, $q) {
-        request = {
-            method: 'get',
-            url: 'http://localhost:1337/posts'
-            //params: {}
-        };
+    constructor($http, $q, configuration) {
+
         http = $http;
         q = $q;
+        config = configuration;
+
+        request = {
+            method: 'get',
+            url: config.api_url + ':' + config.api_port + '/posts'
+        };
+
     }
 
     getPosts() {
@@ -31,6 +35,6 @@ class SummaryService {
     }
 }
 
-SummaryService.$inject = ['$http', '$q'];
+SummaryService.$inject = ['$http', '$q', 'configuration'];
 
 export default SummaryService;
