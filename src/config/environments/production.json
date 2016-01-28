@@ -3,5 +3,8 @@
   "api": {
     "url": "http://shipitweekly.com",
     "port": "1337"
-  }
+  },
+  "repository": "github:gillyd12/ng-blog",
+  "version": "master",
+  "app": "/src/js/bootstrap"
 }
