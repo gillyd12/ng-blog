@@ -1,7 +1,7 @@
 {
   "name": "ng-blog",
   "version": "0.0.1",
-  "main": "./src/js/ng-blog.js",
+  "main": "./ng-blog.js",
   "format": "es6",
   "description": "interoperable blog directive that consumes json",
   "homepage": "http://www.shipitweekly.com",
