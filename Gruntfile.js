@@ -71,13 +71,13 @@ module.exports = function (grunt) {
 
     // configure development environment
     grunt.registerTask('development', [
-        'replace:development',
-        'replace:ng_blog_dev'
+        'replace:development'
+        //'replace:ng_blog_dev'
     ]);
 
     grunt.registerTask('production', [
-        'replace:production',
-        'replace:ng_blog_prod'
+        'replace:production'
+        //'replace:ng_blog_prod'
     ]);
 
 };
