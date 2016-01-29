@@ -9,7 +9,7 @@ import VendorModule from './modules/vendor';
 import ApplicationModule from './modules/application';
 
 
-var mainModule = angular.module('mainApp', [
+var mainModule = angular.module('ng-blog', [
     VendorModule.name,
     ApplicationModule.name
 ]).config(['$locationProvider', function ($locationProvider) {
