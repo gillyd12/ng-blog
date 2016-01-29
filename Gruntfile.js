@@ -33,38 +33,8 @@ module.exports = function (grunt) {
                     src: ['./src/config/config.js'],
                     dest: './src/js/modules/'
                 }]
-            },
-            ng_blog_dev: {
-                options: {
-                    patterns: [{
-                        json: grunt.file.readJSON('./src/config/environments/development.json')
-                    }]
-                },
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    src: ['./src/config/ng-blog.js'],
-                    dest: './'
-                }]
-            },
-            ng_blog_prod: {
-                options: {
-                    patterns: [{
-                        json: grunt.file.readJSON('./src/config/environments/production.json')
-                    }]
-                },
-                files: [{
-                    expand: true,
-                    flatten: true,
-                    src: ['./src/config/ng-blog.js'],
-                    dest: './'
-                }]
             }
-
-
-
         }
-
     });
 
     grunt.loadNpmTasks('grunt-replace');
@@ -72,12 +42,10 @@ module.exports = function (grunt) {
     // configure development environment
     grunt.registerTask('development', [
         'replace:development'
-        //'replace:ng_blog_dev'
     ]);
 
     grunt.registerTask('production', [
         'replace:production'
-        //'replace:ng_blog_prod'
     ]);
 
 };

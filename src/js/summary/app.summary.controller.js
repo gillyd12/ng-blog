@@ -12,7 +12,8 @@ class SummaryController {
     }
 
     init($scope, SummaryService) {
-        view = $scope;
+        view = this;
+        //view = $scope;
         summaryService = SummaryService;
         this.retrievePosts();
     }

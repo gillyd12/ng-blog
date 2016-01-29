@@ -1,7 +1,7 @@
-<div data-ng-repeat="post in collection">
+<div id="blog_summary" data-ng-repeat="post in summaryCntl.collection">
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h1 class="panel-title" data-ng-bind="post.title.rendered"/>
+            <h1 class="panel-title" data-ng-bind-html="post.title.rendered"/>
         </div>
         <div class="panel-body">
             <div data-ng-bind-html="post.excerpt.rendered"></div>
