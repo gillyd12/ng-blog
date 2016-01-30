@@ -5,7 +5,7 @@ import directive from './app.summary.directive';
 import controller from './app.summary.controller';
 import service from './app.summary.service';
 
-export default angular.module('Summary', [])
+export default angular.module('ngBlog.module.summary', [])
     .directive('summary', directive)
     .controller('summaryController', controller)
     .service('SummaryService', service);

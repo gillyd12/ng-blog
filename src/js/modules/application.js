@@ -4,7 +4,7 @@
 import SummaryModule from '../summary/app.summary.module'
 import ConfigurationModule from './config'
 
-export default angular.module('Application', [
+export default angular.module('ngBlog.module.application', [
     SummaryModule.name,
     ConfigurationModule.name
 ]);

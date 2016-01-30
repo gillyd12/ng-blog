@@ -3,7 +3,7 @@
  */
 'use strict';
 
-export default angular.module('services.config', [])
+export default angular.module('ngBlog.module.config', [])
     .constant('configuration', {
         environment: 'development',
         api_port: '1337',
