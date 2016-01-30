@@ -3,8 +3,5 @@
   "api": {
     "url": "http://localhost",
     "port": "1337"
-  },
-  "repository": "github:gillyd12/ng-blog",
-  "version": "feature-blog-data-framework",
-  "app": "/src/js/bootstrap"
+  }
 }

@@ -8,6 +8,10 @@ function summaryDirective() {
     return {
         restrict: "E",
         template: template,
+        scope: {
+            api_url: '=url',
+            api_port: '=port'
+        },
         controllerAs: "summaryCntl",
         controller: SummaryController
     };
