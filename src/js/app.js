@@ -15,7 +15,6 @@ var mainModule = angular.module('ng-blog', [
 ]).config(['$locationProvider', function ($locationProvider) {
         $locationProvider.html5Mode(true);
     }]);
-
 // this turns off debugging in production
 //app.config(['$compileProvider', function ($compileProvider) {
 //  $compileProvider.debugInfoEnabled(false);

@@ -26,8 +26,6 @@
   },
   "jspm": {
     "dependencies": {
-      "angular": "github:angular/bower-angular@^1.4.3",
-      "angular-sanitize": "github:angular/bower-angular-sanitize@^1.4.3",
       "text": "github:systemjs/plugin-text@^0.0.2"
     },
     "devDependencies": {
