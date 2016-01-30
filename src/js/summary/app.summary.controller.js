@@ -15,8 +15,12 @@ class SummaryController {
         view = this;
         //view = $scope;
         summaryService = SummaryService;
-        configuration.api_port = $scope.api_port;
-        configuration.api_url = $scope.api_url;
+        if ($scope.api_port) {
+            configuration.api_port = $scope.api_port;
+        }
+        if ($scope.api_url) {
+            configuration.api_url = $scope.api_url;
+        }
 
         this.retrievePosts();
     }

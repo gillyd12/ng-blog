@@ -1,7 +1,0 @@
-{
-  "environment": "development",
-  "api": {
-    "url": "http://localhost",
-    "port": "1337"
-  }
-}
