@@ -1,14 +1,18 @@
 <div id="ngbSummary_tpl" data-ng-repeat="post in summaryCntl.collection">
-    <div id="ngbSummary_panel" class="panel panel-default">
+    <div id="ngbSummary_panel" class=".panel panel-default">
         <div id="ngbSummary_heading" class="panel-heading">
             <h1 id="ngbSummary_title" class="panel-title" data-ng-bind-html="post.title.rendered"/>
         </div>
         <div id="ngbSummary_body" class="panel-body">
             <div id="ngbSummary_excerpt" data-ng-bind-html="post.excerpt.rendered"></div>
-            <div id="ngbSummary_author" data-ng-bind-html="post.author"></div>
-            <div id="ngbSummary_postdate" data-ng-bind-html="post.date_gmt"></div>
-            <div id="ngbSummary_modifieddate" data-ng-bind-html="post.modified_gmt"></div>
-            <div id="ngbSummary_tgs" data-ng-bind-html="post.tags"></div>
+            <div class="container">
+                <div class="row">
+                    <div id="ngbSummary_author" class="col-sm-3" data-ng-bind-html="post.author"></div>
+                    <div id="ngbSummary_postdate" class="col-sm-3" data-ng-bind-html="post.date_gmt"></div>
+                    <div id="ngbSummary_modifieddate" class="col-sm-3" data-ng-bind-html="post.modified_gmt"></div>
+                    <div id="ngbSummary_tags" class="col-sm-3" data-ng-bind-html="post.tags"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

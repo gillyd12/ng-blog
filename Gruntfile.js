@@ -44,15 +44,32 @@ module.exports = function (grunt) {
                 cmd: 'sudo jspm dl-loader babel'
             },
             jspmBundle: {
-                cmd: 'sudo jspm bundle-sfx src/js/app.js dist/ngBlog.js -minify --skip-source-maps'
+                cmd: 'jspm bundle-sfx src/js/app.js dist/ngBlog.js -minify --skip-source-maps'
             }
         },
+        watch: {
+            files: ['*.less', 'src/**'],
+            tasks: ['less']
+        },
+        less: {
+            main: {
+                options: {
+                    compress: true,
+                    cleancss: true
+                },
+                files: {
+                    './src/css/main.css': './main.less'
+                }
+            }
+        }
+
 
     });
 
     //grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
     // configure development environment
     grunt.registerTask('update dependencies', [
@@ -61,6 +78,9 @@ module.exports = function (grunt) {
     ]);
     grunt.registerTask('bundle', [
         'exec:jspmBundle'
+    ]);
+    grunt.registerTask('dev-watch', [
+        'watch'
     ]);
 
 };

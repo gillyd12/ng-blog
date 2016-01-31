@@ -1,4 +1,6 @@
 /.idea
 /node_modules
 /jspm_packages
+/main.less
+/src/css
 /config.js
