@@ -2,7 +2,6 @@
  * Created by bryangill on 10/24/15.
  */
 
-var request;
 var http;
 var q;
 var config;
@@ -15,14 +14,14 @@ class SummaryService {
         q = $q;
         config = configuration;
 
-        request = {
+    }
+
+    getPosts() {
+        var request = {
             method: 'get',
             url: config.api_url + ':' + config.api_port + '/posts'
         };
 
-    }
-
-    getPosts() {
         return http(request).then(function (response) {
             if (response) {
                 return response;
