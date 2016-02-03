@@ -1,16 +1,42 @@
 <div id="ngbSummary_tpl" data-ng-repeat="post in summaryCntl.collection">
-    <div id="ngbSummary_panel" class="panel panel-default">
-        <div id="ngbSummary_heading" class="panel-heading">
-            <h1 id="ngbSummary_title" class="panel-title" data-ng-bind-html="post.title.rendered"/>
+    <div id="ngbSummary">
+        <div id="ngbSummary_heading">
+            <h1 id="ngbSummary_title" class="page-header" data-ng-bind-html="post.title.rendered"/>
         </div>
-        <div id="ngbSummary_body" class="panel-body">
-            <div id="ngbSummary_excerpt" data-ng-bind-html="post.excerpt.rendered"></div>
-            <div class="container">
+        <div id="ngbSummary_body">
+
+            <div id="ngbSummary_excerpt" class='lead' data-ng-bind-html="post.excerpt.rendered"></div>
+
+            <div class="container-fluid">
                 <div class="row">
-                    <div id="ngbSummary_author" class="col-sm-3" data-ng-bind-html="post.author"></div>
-                    <div id="ngbSummary_postdate" class="col-sm-3" data-ng-bind-html="post.date_gmt"></div>
-                    <div id="ngbSummary_modifieddate" class="col-sm-3" data-ng-bind-html="post.modified_gmt"></div>
-                    <div id="ngbSummary_tags" class="col-sm-3" data-ng-bind-html="post.tags"></div>
+                    <div class="col-sm-1">
+                        <label class="text-left">Author</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <p id="ngbSummary_author" class="text-left" data-ng-bind-html="post.author"></p>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <label class="text-left">Posted</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <p id="ngbSummary_postdate" class="text-left" data-ng-bind-html="post.date_gmt | date: 'short'"></p>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <label class="text-left">Modified</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <p id="ngbSummary_modifieddate" class="text-left" data-ng-bind-html="post.modified_gmt | date: 'short'"></p>
+                    </div>
+
+                    <div class="col-sm-1">
+                        <label class="text-left">Tags</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <p id="ngbSummary_tags" class="text-left" data-ng-bind-html="post.tags"></p>
+                    </div>
+
                 </div>
             </div>
         </div>
