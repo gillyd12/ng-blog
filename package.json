@@ -1,6 +1,7 @@
 {
   "name": "ng-blog",
-  "version": "feature-blog-data-framework",
+  "version": "0.0.1",
+  "registry": "github",
   "main": "./dist/ngBlog.js",
   "format": "es6",
   "description": "interoperable blog directive that consumes json",

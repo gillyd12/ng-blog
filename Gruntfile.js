@@ -7,35 +7,6 @@ module.exports = function (grunt) {
     'use strict';
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        // replace isn't needed at this time
-        //replace: {
-        //    development: {
-        //        options: {
-        //            patterns: [{
-        //                json: grunt.file.readJSON('./src/config/environments/development.json')
-        //            }]
-        //        },
-        //        files: [{
-        //            expand: true,
-        //            flatten: true,
-        //            src: ['./src/config/config.js'],
-        //            dest: './src/js/modules/'
-        //        }]
-        //    },
-        //    production: {
-        //        options: {
-        //            patterns: [{
-        //                json: grunt.file.readJSON('./src/config/environments/production.json')
-        //            }]
-        //        },
-        //        files: [{
-        //            expand: true,
-        //            flatten: true,
-        //            src: ['./src/config/config.js'],
-        //            dest: './src/js/modules/'
-        //        }]
-        //    }
-        //}
         exec: {
             jspmInstall: {
                 cmd: 'sudo jspm install'
@@ -45,11 +16,14 @@ module.exports = function (grunt) {
             },
             jspmBundle: {
                 cmd: 'jspm bundle-sfx src/js/app.js dist/ngBlog.js -minify --skip-source-maps'
+            },
+            jspmLink: {
+                cmd: 'sudo jspm link -y'
             }
         },
         watch: {
             files: ['*.less', 'src/**'],
-            tasks: ['less']
+            tasks: ['less', 'bundle', 'exec:jspmLink']
         },
         less: {
             main: {
@@ -66,7 +40,6 @@ module.exports = function (grunt) {
 
     });
 
-    //grunt.loadNpmTasks('grunt-replace');
     grunt.loadNpmTasks('grunt-exec');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
