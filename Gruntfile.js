@@ -23,7 +23,7 @@ module.exports = function (grunt) {
         },
         watch: {
             files: ['*.less', 'src/**'],
-            tasks: ['less', 'bundle', 'exec:jspmLink']
+            tasks: ['less', 'bundle']
         },
         less: {
             main: {
@@ -36,7 +36,6 @@ module.exports = function (grunt) {
                 }
             }
         }
-
 
     });
 
