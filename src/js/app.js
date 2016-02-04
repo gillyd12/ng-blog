@@ -9,9 +9,15 @@ import VendorModule from './modules/vendor';
 import ApplicationModule from './modules/application';
 
 
-var mainModule = angular.module('mainApp', [
+var mainModule = angular.module('ngBlog', [
     VendorModule.name,
     ApplicationModule.name
-])
+]).config(['$locationProvider', function ($locationProvider) {
+        $locationProvider.html5Mode(true);
+    }]);
+// this turns off debugging in production
+//app.config(['$compileProvider', function ($compileProvider) {
+//  $compileProvider.debugInfoEnabled(false);
+//}]);
 
 export default mainModule;

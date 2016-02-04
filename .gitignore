@@ -1,4 +1,11 @@
 /.idea
 /node_modules
 /jspm_packages
+<<<<<<< HEAD
+/main.less
+/index.html
+/src/css
+/config.js
+=======
 config.js
+>>>>>>> master
