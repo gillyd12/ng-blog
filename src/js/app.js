@@ -1,19 +1,13 @@
 /**
  * Created by Gillyd on 10/22/2015.
  */
+import summary from './summary/summary.m';
 
-// Application related modules
-import ApplicationModule from './modules/application';
-
-
-var mainModule = angular.module('ngBlog', [
-    ApplicationModule.name
-]).config(['$locationProvider', function ($locationProvider) {
+export default angular.module('ngBlog', ['app.summary'])
+    .config(['$locationProvider', function ($locationProvider) {
         $locationProvider.html5Mode(true);
     }]);
 // this turns off debugging in production
 //app.config(['$compileProvider', function ($compileProvider) {
 //  $compileProvider.debugInfoEnabled(false);
 //}]);
-
-export default mainModule;
