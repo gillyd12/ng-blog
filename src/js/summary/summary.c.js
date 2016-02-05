@@ -2,19 +2,19 @@
  * Created by bryangill on 10/24/15.
  */
 
-var summaryService;
+var service;
 var view;
 
 class SummaryController {
 
-    constructor($scope, SummaryService, configuration) {
-        this.init($scope, SummaryService, configuration);
+    constructor($scope, summaryService, configuration) {
+        this.init($scope, summaryService, configuration);
     }
 
-    init($scope, SummaryService, configuration) {
+    init($scope, summaryService, configuration) {
         view = this;
         //view = $scope;
-        summaryService = SummaryService;
+        service = summaryService;
         if ($scope.api_port) {
             configuration.api_port = $scope.api_port;
         }
@@ -26,7 +26,7 @@ class SummaryController {
     }
 
     retrievePosts() {
-        summaryService.getPosts()
+        service.getPosts()
             .then(function (response) {
                 view.collection = response.data;
             }, function (response) {
@@ -35,6 +35,6 @@ class SummaryController {
     }
 }
 
-SummaryController.$inject = ['$scope', 'SummaryService', 'configuration'];
+SummaryController.$inject = ['$scope', 'summaryService', 'configuration'];
 
 export default SummaryController;

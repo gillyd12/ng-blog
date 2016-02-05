@@ -2,7 +2,7 @@
  * Created by bryangill on 10/24/15.
  */
 import template from './summary.html!text';
-import SummaryController from './app.summary.controller';
+import SummaryController from './summary.c.js';
 
 function summaryDirective() {
     return {
