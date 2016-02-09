@@ -4,7 +4,7 @@
 import template from './summary.html!text';
 import SummaryController from './summary.c.js';
 
-function summaryDirective() {
+function summary() {
     return {
         restrict: "E",
         template: template,
@@ -12,9 +12,9 @@ function summaryDirective() {
             api_url: '=url',
             api_port: '=port'
         },
-        controllerAs: "summaryCntl",
+        controllerAs: "summaryCtrl",
         controller: SummaryController
     };
 }
 
-export default summaryDirective;
+export default summary;
