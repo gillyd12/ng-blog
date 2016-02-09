@@ -26,7 +26,7 @@ class AuthorController {
     retrieveAuthor(id) {
         service.getAuthor(id)
             .then(function (response) {
-                view.author = response.data;
+                view.author = response.data.name;
             }, function (response) {
                 view.error = response.statusText;
             });

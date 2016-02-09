@@ -12,7 +12,10 @@ function author() {
            author: '='
         },
         controllerAs: "authorCtrl",
-        controller: AuthorController
+        controller: AuthorController,
+        link: function (scope, element, attrs, authorCtrl) {
+            authorCtrl.retrieveAuthor(attrs.author);
+        }
     };
 }
 
