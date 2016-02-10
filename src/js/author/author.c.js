@@ -11,8 +11,9 @@ class AuthorController {
     }
 
     init($scope, authorService, configuration) {
-        view = this;
-        //view = $scope;
+        //view = this;
+        view = $scope;
+        console.log('instantiated');
         service = authorService;
         if ($scope.api_port) {
             configuration.api_port = $scope.api_port;
@@ -20,13 +21,15 @@ class AuthorController {
         if ($scope.api_url) {
             configuration.api_url = $scope.api_url;
         }
-        //this.retrieveAuthor($scope.author);
+        this.retrieveAuthor($scope.author);
     }
 
     retrieveAuthor(id) {
         service.getAuthor(id)
             .then(function (response) {
-                view.author = response.data.name;
+                console.log('calling retrieve author in controller');
+                view.name = response.data.name;
+                console.log(view.name);
             }, function (response) {
                 view.error = response.statusText;
             });
