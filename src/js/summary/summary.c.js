@@ -12,7 +12,6 @@ class SummaryController {
     }
 
     init($scope, summaryService, configuration) {
-        //view = this;
         view = $scope;
         service = summaryService;
         if ($scope.api_port) {

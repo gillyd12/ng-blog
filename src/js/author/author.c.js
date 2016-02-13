@@ -12,7 +12,6 @@ class AuthorController {
 
     init($scope, authorService, configuration) {
         view = $scope;
-        console.log('instantiated');
         service = authorService;
         if ($scope.api_port) {
             configuration.api_port = $scope.api_port;

@@ -1,9 +1,6 @@
 /**
  * Created by bryangill on 2/8/16.
  */
-/**
- * Created by bryangill on 10/24/15.
- */
 import directive from './author.d.js';
 import AuthorController from './author.c.js';
 import authorService from './author.s.js';
