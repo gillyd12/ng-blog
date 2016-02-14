@@ -33,7 +33,7 @@
                         <label class="text-left">Tags</label>
                     </div>
                     <div class="col-sm-2">
-                        <p id="ngbSummary_tags" class="text-left" data-ng-bind-html="post.tags"></p>
+                            <p id="ngbSummary_tags" class="text-left" data-ng-repeat="pTag in post.tags" data-ngb-tag tag={{pTag}}></p>
                     </div>
                 </div>
             </div>
