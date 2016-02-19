@@ -19,7 +19,7 @@ class SummaryService {
     getPosts() {
         var request = {
             method: 'get',
-            url: config.api_url + ':' + config.api_port + '/posts'
+            url: config.api_url + ':' + config.api_port + '/post'
         };
 
         return http(request).then(function (response) {

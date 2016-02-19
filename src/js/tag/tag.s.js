@@ -18,7 +18,7 @@ class TagService {
     getTag(id) {
         var request = {
             method: 'get',
-            url: config.api_url + ':' + config.api_port + '/tags' + '/' + id
+            url: config.api_url + ':' + config.api_port + '/tag' + '/' + id
         };
 
         return http(request).then(function (response) {

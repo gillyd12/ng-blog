@@ -19,7 +19,7 @@ class AuthorService {
     getAuthor(id) {
         var request = {
             method: 'get',
-            url: config.api_url + ':' + config.api_port + '/users' + '/' + id
+            url: config.api_url + ':' + config.api_port + '/user' + '/' + id
         };
 
         return http(request).then(function (response) {
