@@ -1,6 +1,6 @@
 {
   "name": "ng-blog",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "registry": "github",
   "main": "./dist/ngBlog.js",
   "format": "es6",

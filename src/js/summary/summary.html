@@ -1,11 +1,11 @@
 <div id="ngbSummary_tpl" data-ng-repeat="post in collection">
     <div id="ngbSummary" class="form-group">
         <div id="ngbSummary_heading">
-            <h1 id="ngbSummary_title" class="page-header" data-ng-bind-html="post.title.rendered"/>
+            <h1 id="ngbSummary_title" class="page-header" data-ng-bind-html="post.title"/>
         </div>
         <div id="ngbSummary_body">
             <div class="form-group">
-                <div id="ngbSummary_excerpt" class='lead' data-ng-bind-html="post.excerpt.rendered"></div>
+                <div id="ngbSummary_excerpt" class='lead' data-ng-bind-html="post.excerpt"></div>
             </div>
             <div class="container-fluid">
                 <div class="row">
@@ -20,14 +20,14 @@
                     </div>
                     <div class="col-sm-2">
                         <p id="ngbSummary_postdate" class="text-left"
-                           data-ng-bind-html="post.date_gmt | date: 'short'"></p>
+                           data-ng-bind-html="post.published_date | date: 'short'"></p>
                     </div>
                     <div class="col-sm-1">
                         <label class="text-left">Modified</label>
                     </div>
                     <div class="col-sm-2">
                         <p id="ngbSummary_modifieddate" class="text-left"
-                           data-ng-bind-html="post.modified_gmt | date: 'short'"></p>
+                           data-ng-bind-html="post.modified_date | date: 'short'"></p>
                     </div>
                     <div class="col-sm-1">
                         <label class="text-left">Tags</label>
