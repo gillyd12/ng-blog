@@ -1,7 +1,9 @@
 <div id="ngbSummary_tpl" data-ng-repeat="post in collection">
     <div id="ngbSummary" class="form-group">
         <div id="ngbSummary_heading">
-            <h1 id="ngbSummary_title" class="page-header" data-ng-bind-html="post.title"/>
+            <h1 id="ngbSummary_title" class="page-header">
+                <a id="ngbSummary_link" data-ng-bind-html="post.title" data-ng-href="{{post.link}}"></a>
+            </h1>
         </div>
         <div id="ngbSummary_body">
             <div class="form-group">
