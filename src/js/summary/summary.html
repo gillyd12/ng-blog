@@ -1,13 +1,13 @@
-<div id="ngbSummary_tpl" data-ng-repeat="post in collection">
-    <div id="ngbSummary" class="form-group">
-        <div id="ngbSummary_heading">
-            <h1 id="ngbSummary_title" class="page-header">
-                <a id="ngbSummary_link" data-ng-bind-html="post.title" data-ng-href="{{post.link}}"></a>
+<div id="siwSummary_tpl" data-ng-repeat="post in collection">
+    <div id="siwSummary" class="form-group">
+        <div id="siwSummary_heading">
+            <h1 id="siwSummary_title" class="page-header">
+                <a id="siwSummary_link" data-ng-bind-html="post.title" data-ng-href="{{post.link}}"></a>
             </h1>
         </div>
-        <div id="ngbSummary_body">
+        <div id="siwSummary_body">
             <div class="form-group">
-                <div id="ngbSummary_excerpt" class='lead' data-ng-bind-html="post.excerpt"></div>
+                <div id="siwSummary_excerpt" class='lead' data-ng-bind-html="post.excerpt"></div>
             </div>
             <div class="container-fluid">
                 <div class="row">
@@ -15,27 +15,27 @@
                         <label class="text-left">Author</label>
                     </div>
                     <div class="col-sm-2">
-                        <p id="ngbSummary_author" class="text-left" data-ngb-author author={{post.author}}/>
+                        <p id="siwSummary_author" class="text-left" data-siw-author author={{post.author}}/>
                     </div>
                     <div class="col-sm-1">
                         <label class="text-left">Posted</label>
                     </div>
                     <div class="col-sm-2">
-                        <p id="ngbSummary_postdate" class="text-left"
+                        <p id="siwSummary_postdate" class="text-left"
                            data-ng-bind-html="post.published_date | date: 'short'"></p>
                     </div>
                     <div class="col-sm-1">
                         <label class="text-left">Modified</label>
                     </div>
                     <div class="col-sm-2">
-                        <p id="ngbSummary_modifieddate" class="text-left"
+                        <p id="siwSummary_modifieddate" class="text-left"
                            data-ng-bind-html="post.modified_date | date: 'short'"></p>
                     </div>
                     <div class="col-sm-1">
                         <label class="text-left">Tags</label>
                     </div>
                     <div class="col-sm-2">
-                        <p id="ngbSummary_tags" class="text-left" data-ng-repeat="pTag in post.tags" data-ngb-tag tag={{pTag}}></p>
+                        <p id="siwSummary_tags" class="text-left" data-ng-repeat="pTag in post.tags" data-siw-tag tag={{pTag}}></p>
                     </div>
                 </div>
             </div>

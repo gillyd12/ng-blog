@@ -5,8 +5,8 @@ import directive from './summary.d.js';
 import SummaryController from './summary.c.js';
 import summaryService from './summary.s.js';
 
-export default angular.module('ngBlog.summary', ['ngSanitize'])
-    .directive('ngbSummary', directive)
+export default angular.module('siwBlog.summary', ['ngSanitize'])
+    .directive('siwSummary', directive)
     .controller('SummaryController', SummaryController)
     .service('summaryService', summaryService);
 

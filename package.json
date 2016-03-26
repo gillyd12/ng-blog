@@ -1,19 +1,19 @@
 {
-  "name": "ng-blog",
+  "name": "siw-blog",
   "version": "0.0.6",
   "registry": "github",
-  "main": "./dist/ngBlog.js",
+  "main": "./dist/siwBlog.js",
   "format": "es6",
   "description": "interoperable blog directive that consumes json",
   "homepage": "http://www.shipitweekly.com",
-  "bugs": "https://github.com/gillyd12/ng-blog/issues",
+  "bugs": "https://github.com/gillyd12/siw-blog/issues",
   "contributors": [
     "Bryan Gill <bryan@shipitweekly.com>"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gillyd12/ng-blog"
+    "url": "https://github.com/gillyd12/siw-blog"
   },
   "scripts": {},
   "dependencies": {},
