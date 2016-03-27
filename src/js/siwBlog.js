@@ -5,10 +5,10 @@ import summary from './summary/summary.m';
 import author from './author/author.m';
 import tag from './tag/tag.m';
 
-export default angular.module('ngBlog', [
-    'ngBlog.summary',
-    'ngBlog.author',
-    'ngBlog.tag'
+export default angular.module('siwBlog', [
+    'siwBlog.summary',
+    'siwBlog.author',
+    'siwBlog.tag'
 ]).constant('configuration', {
         environment: 'development',
         api_port: '1337',
