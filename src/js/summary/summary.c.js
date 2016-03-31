@@ -51,7 +51,7 @@ class SummaryController {
     }
 
 }
-
+    
 SummaryController.$inject = ['$scope', 'summaryService', 'configuration'];
 
 export default SummaryController;

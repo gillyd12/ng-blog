@@ -32,10 +32,11 @@
                            data-ng-bind-html="post.modified_date | date: 'short'"></p>
                     </div>
                     <div class="col-sm-1">
-                        <label class="text-left">Tags</label>
+                        <label class="text-left">Tags & Categories</label>
                     </div>
                     <div class="col-sm-2">
                         <p id="siwSummary_tags" class="text-left" data-ng-repeat="pTag in post.tags" data-siw-tag tag={{pTag}}></p>
+                        <p id="siwSummary_categories" class="text-left" data-ng-repeat="pCategory in post.categories" data-siw-category category={{pCategory}}></p>
                     </div>
                 </div>
             </div>
