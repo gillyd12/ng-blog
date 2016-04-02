@@ -7,7 +7,9 @@ import AuthorController from './author.c.js';
 
 function author() {
     return {
-        scope: {},
+        scope: {
+            author: '@'
+        },
         controllerAs: "authorCtrl",
         controller: AuthorController,
         link: function (scope, element, attrs, authorCtrl) {
