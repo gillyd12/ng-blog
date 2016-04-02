@@ -13,8 +13,12 @@ function author() {
         controllerAs: "authorCtrl",
         controller: AuthorController,
         link: function (scope, element, attrs, authorCtrl) {
-            authorCtrl.retrieveAuthor(attrs.author).then(function (response) {
-                element.append(response.data.name);
+            attrs.$observe('author', function (value) {
+                if (value) {
+                    authorCtrl.retrieveAuthor(attrs.author).then(function (response) {
+                        element.append(response.data.name);
+                    });
+                }
             });
         }
     };
