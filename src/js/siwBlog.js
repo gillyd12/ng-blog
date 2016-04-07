@@ -5,11 +5,13 @@ import summary from './summary/summary.m';
 import author from './author/author.m';
 import tag from './tag/tag.m';
 import category from './category/category.m';
+import comment from './comment/comment.m';
 
 export default angular.module('siwBlog', [
     'siwBlog.summary',
     'siwBlog.author',
     'siwBlog.tag',
+    'siwBlog.comment',
     'siwBlog.category'
 ]).constant('configuration', {
         environment: 'development',
