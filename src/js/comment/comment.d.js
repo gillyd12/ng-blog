@@ -14,7 +14,7 @@ function comment() {
         controller: CommentController,
         link: function (scope, element, attrs, commentCtrl) {
             commentCtrl.retrieveComment(attrs.postid).then(function (response) {
-                scope.collection = response.data;
+                commentCtrl.collection = response.data;
             })
         }
     };

@@ -1,7 +1,7 @@
 <!--<div data-ng-repeat="comment in collection" id="siwComment_description" data-ng-bind-html="comment.description"></div>-->
-<div data-ng-show="collection.length > 0">
-    <div data-ng-bind-html="collection.length"></div>
+<div data-ng-show="commentCtrl.collection.length > 0">
+    <div data-ng-bind-html="commentCtrl.collection.length"></div>
 </div>
-<div data-ng-show="collection.length == 0">
+<div data-ng-show="commentCtrl.collection.length == 0">
     <div>0</div>
 </div>
