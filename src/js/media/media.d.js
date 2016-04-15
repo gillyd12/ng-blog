@@ -11,11 +11,13 @@ function media() {
         controllerAs: "mediaCtrl",
         controller: MediaController,
         link: function (scope, element, attrs, mediaCtrl) {
-            mediaCtrl.retrieveMedia(attrs.mediaId).then(function (response) {
-                element.css({
-                    'background-image': 'url(data:image/*;base64,' + response.data.guid + ')'
-                });
-            })
+            if (attrs.mediaId != '0') {
+                mediaCtrl.retrieveMedia(attrs.mediaId).then(function (response) {
+                    element.css({
+                        'background-image': 'url(data:image/*;base64,' + response.data.guid + ')'
+                    });
+                })
+            }
         }
     };
 }
