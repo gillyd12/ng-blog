@@ -15,7 +15,7 @@ module.exports = function (grunt) {
                 cmd: 'sudo jspm dl-loader babel'
             },
             jspmBundle: {
-                cmd: 'jspm bundle-sfx src/js/ngBlog.js dist/ngBlog.js -minify --skip-source-maps'
+                cmd: 'jspm bundle-sfx src/js/siwBlog.js dist/siwBlog.js -minify --skip-source-maps'
             },
             jspmLink: {
                 cmd: 'sudo jspm link -y'

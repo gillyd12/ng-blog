@@ -21,19 +21,37 @@ class SummaryController {
             configuration.api_url = $scope.api_url;
         }
 
-        this.retrievePosts();
+        this.retrievePosts('published_date', 'desc', 4);
     }
 
     retrievePosts() {
-        service.getPosts()
+        var params = {};
+
+        service.getPosts(params)
             .then(function (response) {
                 view.collection = response.data;
             }, function (response) {
                 view.error = response.statusText;
             });
     }
-}
 
+    retrievePosts(orderByField, orderBy, limit) {
+
+        var params = {
+            sort: orderByField + ' ' + orderBy,
+            limit: limit
+        };
+
+        service.getPosts(params)
+            .then(function (response) {
+                view.collection = response.data;
+            }, function (response) {
+                view.error = response.statusText;
+            });
+    }
+
+}
+    
 SummaryController.$inject = ['$scope', 'summaryService', 'configuration'];
 
 export default SummaryController;
