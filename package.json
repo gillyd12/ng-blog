@@ -1,6 +1,6 @@
 {
   "name": "siw-blog",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "registry": "github",
   "main": "./dist/siwBlog.js",
   "format": "es6",
