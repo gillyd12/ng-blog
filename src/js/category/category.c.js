@@ -6,19 +6,13 @@ var view;
 
 class CategoryController {
 
-    constructor($scope, categoryService, configuration) {
-        this.init($scope, categoryService, configuration);
+    constructor($scope, categoryService) {
+        this.init($scope, categoryService);
     }
 
-    init($scope, categoryService, configuration) {
+    init($scope, categoryService) {
         view = $scope;
         service = categoryService;
-        if ($scope.api_port) {
-            configuration.api_port = $scope.api_port;
-        }
-        if ($scope.api_url) {
-            configuration.api_url = $scope.api_url;
-        }
     }
 
     retrieveCategory(id) {
@@ -26,6 +20,6 @@ class CategoryController {
     }
 }
 
-CategoryController.$inject = ['$scope', 'categoryService', 'configuration'];
+CategoryController.$inject = ['$scope', 'categoryService'];
 
 export default CategoryController;

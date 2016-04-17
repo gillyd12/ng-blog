@@ -6,19 +6,13 @@ var view;
 
 class AuthorController {
 
-    constructor($scope, authorService, configuration) {
-        this.init($scope, authorService, configuration);
+    constructor($scope, authorService) {
+        this.init($scope, authorService);
     }
 
-    init($scope, authorService, configuration) {
+    init($scope, authorService) {
         view = $scope;
         service = authorService;
-        if ($scope.api_port) {
-            configuration.api_port = $scope.api_port;
-        }
-        if ($scope.api_url) {
-            configuration.api_url = $scope.api_url;
-        }
     }
 
     retrieveAuthor(id) {
@@ -26,6 +20,6 @@ class AuthorController {
     }
 }
 
-AuthorController.$inject = ['$scope', 'authorService', 'configuration'];
+AuthorController.$inject = ['$scope', 'authorService'];
 
 export default AuthorController;

@@ -6,11 +6,11 @@ var view;
 
 class MediaController {
 
-    constructor($scope, mediaService, configuration) {
-        this.init($scope, mediaService, configuration);
+    constructor($scope, mediaService) {
+        this.init($scope, mediaService);
     }
 
-    init($scope, mediaService, configuration) {
+    init($scope, mediaService) {
         view = $scope;
         service = mediaService;
     }
@@ -20,6 +20,6 @@ class MediaController {
     }
 }
 
-MediaController.$inject = ['$scope', 'mediaService', 'configuration'];
+MediaController.$inject = ['$scope', 'mediaService'];
 
 export default MediaController;

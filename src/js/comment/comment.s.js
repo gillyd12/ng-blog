@@ -7,11 +7,11 @@ var config;
 
 class CommentService {
 
-    constructor($http, $q, configuration) {
+    constructor($http, $q, siwBlogConfig) {
 
         http = $http;
         q = $q;
-        config = configuration;
+        config = siwBlogConfig;
 
     }
 
@@ -35,6 +35,6 @@ class CommentService {
 
 }
 
-CommentService.$inject = ['$http', '$q', 'configuration'];
+CommentService.$inject = ['$http', '$q', 'siwBlog.config'];
 
 export default CommentService;

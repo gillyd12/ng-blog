@@ -8,11 +8,11 @@ var config;
 
 class AuthorService {
 
-    constructor($http, $q, configuration) {
+    constructor($http, $q, siwBlogConfig) {
 
         http = $http;
         q = $q;
-        config = configuration;
+        config = siwBlogConfig;
 
     }
 
@@ -36,6 +36,6 @@ class AuthorService {
 
 }
 
-AuthorService.$inject = ['$http', '$q', 'configuration'];
+AuthorService.$inject = ['$http', '$q', 'siwBlog.config'];
 
 export default AuthorService;

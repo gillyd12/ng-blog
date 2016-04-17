@@ -7,11 +7,11 @@ var config;
 
 class TagService {
 
-    constructor($http, $q, configuration) {
+    constructor($http, $q, siwBlogConfig) {
 
         http = $http;
         q = $q;
-        config = configuration;
+        config = siwBlogConfig;
 
     }
 
@@ -35,6 +35,6 @@ class TagService {
 
 }
 
-TagService.$inject = ['$http', '$q', 'configuration'];
+TagService.$inject = ['$http', '$q', 'siwBlog.config'];
 
 export default TagService;
