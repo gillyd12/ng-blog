@@ -7,11 +7,11 @@ var config;
 
 class MediaService {
 
-    constructor($http, $q, configuration) {
+    constructor($http, $q, siwBlogConfig) {
 
         http = $http;
         q = $q;
-        config = configuration;
+        config = siwBlogConfig;
 
     }
 
@@ -35,6 +35,6 @@ class MediaService {
 
 }
 
-MediaService.$inject = ['$http', '$q', 'configuration'];
+MediaService.$inject = ['$http', '$q', 'siwBlog.config'];
 
 export default MediaService;

@@ -7,11 +7,11 @@ var config;
 
 class CategoryService {
 
-    constructor($http, $q, configuration) {
+    constructor($http, $q, siwBlogConfig) {
 
         http = $http;
         q = $q;
-        config = configuration;
+        config = siwBlogConfig;
 
     }
 
@@ -35,6 +35,6 @@ class CategoryService {
 
 }
 
-CategoryService.$inject = ['$http', '$q', 'configuration'];
+CategoryService.$inject = ['$http', '$q', 'siwBlog.config'];
 
 export default CategoryService;

@@ -8,11 +8,11 @@ var config;
 
 class SummaryService {
 
-    constructor($http, $q, configuration) {
+    constructor($http, $q, siwBlogConfig) {
 
         http = $http;
         q = $q;
-        config = configuration;
+        config = siwBlogConfig;
 
     }
 
@@ -55,6 +55,6 @@ class SummaryService {
 
 }
 
-SummaryService.$inject = ['$http', '$q', 'configuration'];
+SummaryService.$inject = ['$http', '$q', 'siwBlog.config'];
 
 export default SummaryService;

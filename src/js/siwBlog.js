@@ -15,7 +15,7 @@ export default angular.module('siwBlog', [
     'siwBlog.comment',
     'siwBlog.media',
     'siwBlog.category'
-]).constant('configuration', {
+]).value('siwBlog.config', {
         environment: 'development',
         api_port: '1337',
         api_url: 'http://localhost'

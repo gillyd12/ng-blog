@@ -6,11 +6,11 @@ var view;
 
 class CommentController {
 
-    constructor($scope, commentService, configuration) {
-        this.init($scope, commentService, configuration);
+    constructor($scope, commentService) {
+        this.init($scope, commentService);
     }
 
-    init($scope, commentService, configuration) {
+    init($scope, commentService) {
         view = $scope;
         service = commentService;
     }
@@ -20,6 +20,6 @@ class CommentController {
     }
 }
 
-CommentController.$inject = ['$scope', 'commentService', 'configuration'];
+CommentController.$inject = ['$scope', 'commentService'];
 
 export default CommentController;
